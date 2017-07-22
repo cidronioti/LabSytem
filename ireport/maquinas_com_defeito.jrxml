@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="maquinas_com_defeito" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6765561d-b8db-4ad0-887f-f3c2d493d4a8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     `cad_maquina` cad_maquina
+WHERE
+     status_funcionamento = 'COM DEFEITO']]>
+	</queryString>
+	<field name="COD_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MARCA_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MODELO_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NUM_IDENT_MAQUINA" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SO_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PROCESSADOR_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MONITOR_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="STATUS_FUNCIONAMENTO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="obs" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="10" width="802" height="20" uuid="3a5c66fd-548a-4bf4-bf10-8e18afc91689"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDADE FEDERAL DO PIAUÍ - CSHNB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="802" height="20" uuid="4cdc4dc6-4417-4e30-b4af-944882aa25c9"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATÓRIO DO CURSO DE SISTEMAS DE INFORMAÇÃO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-1" y="80" width="801" height="20" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="70603222-d6db-4a50-b9aa-4e782e0495f2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-1" y="80" width="802" height="20" uuid="882f0c1e-29cd-4e6a-83fc-fe55c43483fc"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE MÁQUINAS COM DEFEITO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="23" y="0" width="73" height="80" uuid="1047d3c4-c5d3-4e2a-9544-66c1024fa0b7"/>
+				<imageExpression><![CDATA["C:\\LabSystem\\ireport\\img\\002.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="707" y="0" width="70" height="80" uuid="25acaaf0-76f7-46e8-a365-b4f8967de054"/>
+				<imageExpression><![CDATA["C:\\LabSystem\\ireport\\img\\001.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" uuid="49422c9f-4e81-4812-a959-c9488b7216ab"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="100" height="20" uuid="16720f36-da41-4902-a0d4-361b9820dec5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="100" height="20" uuid="858f2624-9bad-4c21-9aa6-178aefbc454f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="20" uuid="2ee863c1-ea1c-475c-929d-a04a9b4057a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identificação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="20" uuid="ea0e283d-e71e-4ef8-ab8a-e15468676e5d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="86" height="20" uuid="dd90fede-5781-4a70-8388-17aa8e4419bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Processador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="0" width="90" height="20" uuid="c620daff-8f62-43f6-9311-46caf826d279"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monitor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="626" y="0" width="78" height="20" uuid="72b78998-e2ab-483b-8d3c-76107f3b1f72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Funcionamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="704" y="0" width="97" height="20" uuid="77edb174-568d-4b8a-b2a8-9e45343550dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[obs]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="801" height="1" uuid="9c7891a2-d33b-4ff2-a476-20b201df2210"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="99b0757e-4e01-443a-840e-0b023e1e795c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{COD_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="100" height="20" uuid="aa210bc8-cf1e-421a-97dc-330ace69a4c2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MARCA_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="100" height="20" uuid="eb17f472-c851-4de7-9af2-04c35543d8f6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MODELO_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="100" height="20" uuid="d01a7049-2fbd-4735-80af-c657070997af"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NUM_IDENT_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="100" height="20" uuid="f61a6227-7d45-4522-92a5-780767a59f52"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SO_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="86" height="20" uuid="39c20e10-3935-4066-a091-95e2af16104c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROCESSADOR_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="536" y="0" width="90" height="20" uuid="c312cc5f-f2bb-4cc6-89a6-4467a68a916d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MONITOR_MAQUINA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="626" y="0" width="78" height="20" uuid="7efbec81-7285-4f10-8cd3-a947f9492dc4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{STATUS_FUNCIONAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="704" y="0" width="97" height="20" uuid="cefaa32c-276a-4382-b0d3-aeef4368e325"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{obs}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="801" height="1" uuid="7a3397a5-c7b3-466e-a148-daeab638a47c"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="6" width="198" height="20" uuid="96727cc8-5234-489a-8493-98fe7f399cf1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="K:mm a, z">
+				<reportElement x="198" y="6" width="64" height="20" uuid="96a5e645-24d1-46d6-b7f3-389037191b8e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="683" y="6" width="80" height="20" uuid="4f2336d9-232d-48fa-aff5-17c11ef1d61f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="763" y="6" width="40" height="20" uuid="66c78ab5-e199-4b67-8ee5-ddbe234cdba5"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

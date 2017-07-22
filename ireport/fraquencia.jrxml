@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fraquencia" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aeb3f4a5-5aae-4545-9cb3-c1a071336b7c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="DATA_ACESSO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["28/01/2016"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from controle_acesso where data_acesso = $P{DATA_ACESSO};]]>
+	</queryString>
+	<field name="COD_CONTROLE_ACESSO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COD_USUARIO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="COD_MAQUINA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DATA_ACESSO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HORA_ENTRADA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HORA_SAIDA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOME_USUARIO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="STATUS_CONTROLE_ACESSO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="COD_USUARIO">
+		<groupExpression><![CDATA[$F{COD_USUARIO}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="243" y="19" width="320" height="20" uuid="efc0b8cb-8e7f-4d77-aa5e-1744fd2ac89d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDADE FEDERAL DO PIAUÍ - CSHNB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="39" width="414" height="20" uuid="a5f42abd-0027-495f-b29a-bce3ac09acab"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LABORATÓRIO DO CURSO DE SISTEMAS DE INFORMAÇÃO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="49" y="0" width="71" height="79" uuid="20730934-62af-4af9-bdca-aafedce77393"/>
+				<imageExpression><![CDATA["C:\\LabSystem\\ireport\\img\\002.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="687" y="0" width="66" height="78" uuid="aac53c72-94b1-4a43-9380-fee55b560142"/>
+				<imageExpression><![CDATA["C:\\LabSystem\\ireport\\img\\001.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="802" height="20" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="e68915fc-582a-4efb-9f92-4c5b4cc444a6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="1" width="802" height="20" uuid="7d3af771-6f93-4207-b236-2518ea3b8c0f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FREQUENCIA DIÁRIA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="1" width="100" height="20" uuid="ebcae338-4dba-4f8c-8f1f-5400e3ac4e4f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matricula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="449" y="1" width="100" height="20" uuid="7bf516b5-8453-4697-bd93-c29818f3e2c7"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Acesso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="1" width="100" height="20" uuid="ad362d50-280d-43a6-9748-143559f9e9af"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora Saida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="311" height="20" uuid="c3dd48dc-64cc-4eb2-bec7-917b1a15656d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<line>
+				<reportElement x="3" y="27" width="800" height="1" uuid="636a6a36-bbdb-48d3-a9e6-80978f687948"/>
+			</line>
+			<staticText>
+				<reportElement x="581" y="3" width="100" height="20" uuid="a7cf73ad-3855-491e-9255-f2a1e04707e0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora Entrada]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="38" y="0" width="100" height="20" uuid="19f164cf-b08e-4680-a972-cf3332bf4079"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COD_USUARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="311" height="20" uuid="719210d7-4941-4936-b057-ddfe4e6508a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NOME_USUARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="-1" width="100" height="20" uuid="9d464b0c-8410-4eb1-87d3-c504957a8c33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DATA_ACESSO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="703" y="0" width="100" height="20" uuid="dcb9e88f-3f34-4eee-9c22-07f07ecfdfe0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{HORA_SAIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="1" width="100" height="20" uuid="0b4bd5e5-a613-4a7d-a02b-cf8004562665"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{HORA_ENTRADA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="21" width="799" height="1" uuid="57e5ba85-4ba3-40dd-b00d-177e7b992b70"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="3" y="2" width="190" height="20" uuid="4fbec65a-4b99-4a36-89ca-f0003951b85f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="674" y="2" width="80" height="20" uuid="80f754c8-434d-405f-a069-b0bf5a733174"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="759" y="2" width="40" height="20" uuid="ed663dc1-aff0-4c44-88b4-d1f18d123fdd"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="K:mm a, z">
+				<reportElement x="197" y="2" width="50" height="20" uuid="95ee2dad-3ae6-4b33-a9cc-4d739c31a45b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>
